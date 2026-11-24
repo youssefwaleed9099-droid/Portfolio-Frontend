@@ -1,0 +1,42 @@
+<div class="body">
+  <div class="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="homeForm">
+      <h2>Update Home Content</h2>
+
+      <!-- Text Input -->
+      <div class="form-group">
+        <label for="availability">Availability</label>
+        <input
+          type="text"
+          formControlName="availability"
+          placeholder="availability"
+          name="availability"
+        />
+        @if (homeForm.get('availability')!.invalid && homeForm.get('availability')!.touched) {
+          @if (homeForm.get('availability')!.errors?.['required']) {
+            <p class="msg">Availability is required</p>
+          } @else {
+            <p class="msg">Minimum chars is 15</p>
+          }
+        }
+      </div>
+
+      <!-- Password Input -->
+      <div class="form-group">
+        <label for="heading">Heading</label>
+        <input type="text" formControlName="heading" placeholder="Heading" name="heading" />
+        @if (homeForm.get('heading')!.invalid && homeForm.get('heading')!.touched) {
+          @if (homeForm.get('heading')!.errors?.['required']) {
+            <p class="msg">Availability is required</p>
+          } @else {
+            <p class="msg">Minimum chars is 15</p>
+          }
+        }
+      </div>
+
+      <div class="form-group text-center">
+        <button type="submit">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>

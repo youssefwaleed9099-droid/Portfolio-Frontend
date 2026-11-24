@@ -1,0 +1,28 @@
+<h2>Client Messages</h2>
+
+<table class="message-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (msg of messages; track msg._id) {
+      <tr>
+        <td>{{ msg.name }}</td>
+        <td>{{ msg.phone }}</td>
+        <td>{{ msg.email }}</td>
+        <td>
+          <button (click)="onDeleteMessage(msg._id)" class="btn-delet">Delete</button>
+        </td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="4">No message yet.</td>
+      </tr>
+    }
+  </tbody>
+</table>

@@ -1,0 +1,48 @@
+<div class="body">
+  <div class="form-container">
+    <form [formGroup]="aboutForm" (ngSubmit)="onSubmit()">
+      <h2>Join US</h2>
+
+      <!-- Text Input -->
+      <div class="form-group">
+        <label for="text">Name</label>
+        <input type="text" formControlName="name" placeholder="Name" name="username" />
+      </div>
+
+      <!-- Password Input -->
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" formControlName="title" placeholder="Title" name="title" />
+      </div>
+
+      <!-- Re-type Password Input -->
+      <div class="form-group">
+        <label for="password">Bio</label>
+        <textarea formControlName="bio" placeholder="Bio"></textarea>
+      </div>
+
+      <!-- Email Input -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" placeholder="Email" name="email" />
+      </div>
+
+      <!-- CV URL -->
+      <div class="form-group">
+        <label for="cv-url">CV URL</label>
+        <input type="text" formControlName="resumeURL" placeholder="Enter your CV URL" name="CV" />
+      </div>
+
+      <!-- File Input -->
+      <div class="form-group">
+        <label for="file">Image</label>
+        <input type="file" (change)="onFileSelected($event)" name="Image" />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group text-center">
+        <button type="submit">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<h1>About Content</h1>
+
+@for (about of aboutContent; track about._id) {
+  <app-about-details [myAbout]="about" />
+}
