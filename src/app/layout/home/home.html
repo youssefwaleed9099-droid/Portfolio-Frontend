@@ -1,5 +1,6 @@
-<h1>Home Section</h1>
-
-@for (home of homeSec; track home) {
-  <app-home-details [homeSection]="home" />
-}
+<div class="home-container">
+  <!-- شيلنا العنوان h1 عشان مش محتاجينه، الـ Heading جاي من الداتا -->
+  @for (home of homeSec; track home._id) {
+    <app-home-details [homeSection]="home" />
+  }
+</div>

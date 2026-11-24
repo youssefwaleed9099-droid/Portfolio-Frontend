@@ -1,12 +1,14 @@
 <h1>My Skills</h1>
 
-@for (group of groupedSkills; track group.category) {
-  <div>
-    <h3>{{ group.category }}</h3>
-    <ul>
-      @for (skill of group.skills; track skill) {
-        <li>{{ skill }}</li>
-      }
-    </ul>
-  </div>
-}
+<div class="skills-grid">
+  @for (group of groupedSkills; track group.category) {
+    <div class="skill-category-card">
+      <h3>{{ group.category }}</h3>
+      <ul>
+        @for (skill of group.skills; track skill) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>

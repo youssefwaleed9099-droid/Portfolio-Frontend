@@ -20,11 +20,16 @@
 
       <div class="form-group" formArrayName="technologies">
         <label for="technologies">Technologies</label>
+
         @for (technology of getTechnology().controls; track $index) {
-          <input type="text" placeholder="Technologies" [formControlName]="$index" />
-          <br />
+          <div class="tech-input-row">
+            <input type="text" placeholder="Technologies" [formControlName]="$index" />
+            <!-- ممكن تضيف زرار مسح للتقنية دي لو حبيت -->
+          </div>
         }
-        <button type="button" (click)="addTechnology()">Add Technology</button>
+
+        <!-- ضفنا كلاس هنا عشان يبقى شكله مختلف عن زرار الـ Submit -->
+        <button type="button" class="btn-add" (click)="addTechnology()">Add Technology</button>
       </div>
 
       <div class="form-group">

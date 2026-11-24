@@ -1,3 +1,10 @@
-<h3>{{ homeSection.availability }}</h3>
+<div class="hero-content">
+  <div class="availability-badge"><span class="dot"></span> {{ homeSection.availability }}</div>
 
-<p>{{ homeSection.heading }}</p>
+  <h1 class="main-heading">{{ homeSection.heading }}</h1>
+
+  <!-- ممكن نضيف زرار هنا بعدين لو حبيت -->
+  <div class="hero-actions">
+    <a routerLink="/projects" class="btn-primary">View My Work</a>
+  </div>
+</div>

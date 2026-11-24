@@ -1,0 +1,37 @@
+/* education.css */
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa; /* نفس لون خلفية الموقع */
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+/* خط أزرق تحت العنوان */
+h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* حاوية الكروت عشان تاخد مساحة محددة */
+.education-container {
+  width: 100%;
+  max-width: 800px; /* عشان ميبقاش عريض أوي */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

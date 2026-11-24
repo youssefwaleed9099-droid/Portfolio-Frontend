@@ -1,0 +1,95 @@
+/* skills.css */
+:host {
+  display: block;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* شبكة الكروت */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* تصميم الكارت بتاع كل فئة */
+.skill-category-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: #007bff;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.skill-category-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* شكل المهارة الواحدة */
+.skill-category-card li {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.skill-category-card li:hover {
+  background-color: #e9ecef;
+}
+
+/* علامة صح أو نقطة قبل كل مهارة */
+.skill-category-card li::before {
+  content: '✓'; /* علامة صح */
+  color: #28a745; /* لون أخضر */
+  font-weight: bold;
+  margin-right: 10px;
+}

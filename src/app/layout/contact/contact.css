@@ -1,0 +1,113 @@
+/* contact.css */
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* تصميم الكارت اللي شايل الفورم */
+form {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px; /* عشان ميبقاش عريض أوي */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  outline: none;
+  background-color: #fafafa;
+}
+
+/* تأثير لما المستخدم يدوس على الحقل */
+.form-group input:focus {
+  border-color: #007bff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* تصميم زرار الإرسال */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* شكل الزرار لو الفورم فاضي (disabled) */
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* التصميم على الموبايل */
+@media (max-width: 600px) {
+  form {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

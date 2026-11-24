@@ -1,3 +1,5 @@
+<img [src]="'http://localhost:3000/uploads/' + myProjects.image" alt="{{ myProjects.title }}" />
+
 <h3>{{ myProjects.title }}</h3>
 
 <p>{{ myProjects.description }}</p>
@@ -9,11 +11,7 @@
   }
 </ul>
 
-<img [src]="'http://localhost:3000/uploads/' + myProjects.image" alt="{{ myProjects.title }}" />
-
-<p>
-  Live: <a [href]="myProjects.liveURL" target="_blank">{{ myProjects.liveURL }}</a>
-</p>
-<p>
-  GitHub: <a [href]="myProjects.GitHubURL" target="_blank">{{ myProjects.GitHubURL }}</a>
-</p>
+<div class="actions">
+  <a [href]="myProjects.liveURL" target="_blank" class="btn-live">Live Demo</a>
+  <a [href]="myProjects.GitHubURL" target="_blank" class="btn-github">GitHub</a>
+</div>

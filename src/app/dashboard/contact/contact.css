@@ -1,0 +1,104 @@
+/* contact.css */
+:host {
+  display: block;
+  padding: 40px;
+  background-color: #f7f8fa;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif; /* أو الخط اللي مستخدمه */
+}
+
+h2 {
+  text-align: center;
+  color: #111;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* تصميم حاوية الجدول */
+.message-table {
+  width: 100%;
+  max-width: 1000px; /* عشان ميبقاش عريض أوي على الشاشات الكبيرة */
+  margin: 0 auto; /* يتوسط الشاشة */
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden; /* عشان الحواف الدائرية تبان */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+}
+
+/* تصميم رأس الجدول (العناوين) */
+th {
+  background-color: #f8f9fa;
+  color: #555;
+  font-weight: 600;
+  text-align: left;
+  padding: 18px 20px;
+  border-bottom: 2px solid #eaeaea;
+  font-size: 1rem;
+}
+
+/* تصميم خلايا الجدول (البيانات) */
+td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+
+/* تأثير لما الماوس ييجي على أي صف */
+tbody tr:hover {
+  background-color: #fcfcfc;
+}
+
+/* عشان نشيل الخط من آخر صف */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* تصميم زرار الحذف */
+.btn-delet {
+  background-color: #dc3545; /* لون أحمر */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-delet:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+/* تصميم رسالة "لا يوجد رسائل" */
+td[colspan='4'] {
+  text-align: center;
+  color: #777;
+  padding: 30px;
+  font-style: italic;
+}
+
+/* التصميم على الموبايل */
+@media (max-width: 768px) {
+  :host {
+    padding: 20px;
+  }
+
+  .message-table {
+    display: block;
+    overflow-x: auto; /* يسمح بالسكرول الأفقي لو الشاشة صغيرة */
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+  }
+}

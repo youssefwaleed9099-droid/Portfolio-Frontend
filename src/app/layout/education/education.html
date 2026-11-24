@@ -1,5 +1,6 @@
 <h1>Education</h1>
-
-@for (education of educations; track education) {
-  <app-education-details [myEducation]="education" />
-}
+<div class="education-container">
+  @for (education of educations; track education._id) {
+    <app-education-details [myEducation]="education" />
+  }
+</div>

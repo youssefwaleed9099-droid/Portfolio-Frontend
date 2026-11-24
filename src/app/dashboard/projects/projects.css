@@ -1,36 +1,43 @@
-.body {
-  font-family: 'Roboto', sans-serif;
+/* projects.css */
+:host {
+  display: block;
+  width: 100%;
+  padding: 40px;
   background-color: #f7f8fa;
-  margin: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .form-container {
   background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px; /* كبرناها شوية عشان الفورم فيها تقنيات كتير */
+  border: 1px solid #eaeaea;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 25px;
-  color: #333;
-  font-size: 24px;
+  margin-bottom: 30px;
+  color: #111;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 500;
-  color: #555;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
 }
 
 input,
@@ -38,57 +45,86 @@ select,
 textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
   box-sizing: border-box;
-  font-size: 16px;
-  transition: border-color 0.3s;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
   border-color: #007bff;
+  background-color: #ffffff;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
 }
 
-input[type='checkbox'],
-input[type='radio'] {
+/* ترتيب حقول التقنيات */
+.tech-input-row {
+  margin-bottom: 10px;
+}
+
+/* شكل زرار إضافة التقنية (Secondary Button) */
+.btn-add {
+  background-color: #e9ecef;
+  color: #495057;
+  border: 1px dashed #ced4da;
   width: auto;
-  margin-right: 10px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s;
+  display: inline-block;
 }
 
-input[type='range'] {
-  width: 100%;
+.btn-add:hover {
+  background-color: #dde0e3;
+  color: #212529;
+  border-color: #adb5bd;
 }
 
-button {
+/* شكل زرار الـ Submit (Primary Button) */
+button[type='submit'] {
   width: 100%;
-  padding: 12px 15px;
+  padding: 14px;
   background-color: #007bff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  margin-top: 10px;
 }
 
-button:hover {
+button[type='submit']:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
-.form-group-inline {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+button[type='submit']:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
 }
 
-.form-group-inline label {
-  margin-right: 10px;
-  margin-bottom: 0;
-}
+/* التصميم على الموبايل */
+@media (max-width: 600px) {
+  :host {
+    padding: 20px;
+  }
 
-.text-center {
-  text-align: center;
+  .form-container {
+    padding: 25px 20px;
+  }
 }

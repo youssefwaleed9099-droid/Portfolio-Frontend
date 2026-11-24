@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { IHomeAPI } from '../../../core/models/home.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-home-details',
   styleUrl: './home-details.css',
   templateUrl: './home-details.html',
