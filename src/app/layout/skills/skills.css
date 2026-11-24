@@ -24,16 +24,15 @@ h1::after {
   border-radius: 2px;
 }
 
-/* شبكة الكروت */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
   margin: 0 auto;
+  align-items: start;
 }
 
-/* تصميم الكارت بتاع كل فئة */
 .skill-category-card {
   background: #ffffff;
   border-radius: 12px;
@@ -69,7 +68,6 @@ h1::after {
   gap: 12px;
 }
 
-/* شكل المهارة الواحدة */
 .skill-category-card li {
   background-color: #f8f9fa;
   color: #333;
@@ -86,10 +84,46 @@ h1::after {
   background-color: #e9ecef;
 }
 
-/* علامة صح أو نقطة قبل كل مهارة */
 .skill-category-card li::before {
-  content: '✓'; /* علامة صح */
-  color: #28a745; /* لون أخضر */
+  content: '✓';
+  color: #28a745;
   font-weight: bold;
   margin-right: 10px;
+}
+
+@media (max-width: 907px) and (min-width: 696px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .skill-category-card {
+    padding: 15px;
+  }
+
+  .skill-category-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-category-card li {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 695px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }

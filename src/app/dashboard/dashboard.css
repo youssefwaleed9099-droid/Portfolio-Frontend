@@ -1,0 +1,11 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7f8fa;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px; /* نفس عرض الـ Sidebar عشان المحتوى ميروحش تحته */
+  padding: 30px;
+}

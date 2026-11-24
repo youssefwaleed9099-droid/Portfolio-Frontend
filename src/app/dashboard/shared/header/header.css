@@ -1,0 +1,72 @@
+/* header.css */
+.sidebar-container {
+  width: 250px; /* عرض الـ Sidebar */
+  height: 100vh; /* طول الشاشة */
+  background-color: #1e293b; /* لون كحلي غامق شيك */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* يخليه ثابت على الشمال */
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* اللوجو أو اسم اللوحة */
+.sidebar-logo {
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+.sidebar-logo h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #38bdf8; /* لون أزرق سماوي */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* قائمة اللينكات */
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 15px;
+  overflow-y: auto;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* شكل اللينك */
+.nav-link {
+  display: block;
+  padding: 12px 20px;
+  color: #cbd5e1; /* لون رمادي فاتح */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* لما الماوس ييجي على اللينك */
+.nav-link:hover {
+  background-color: #334155;
+  color: #fff;
+  transform: translateX(5px); /* حركة خفيفة لليمين */
+}
+
+/* اللينك النشط (اللي انت واقف عليه) */
+.nav-link.active {
+  background-color: #3b82f6; /* لون أزرق */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+  font-weight: 600;
+}
